@@ -44,7 +44,7 @@ Use historical SCADA data alongside historical weather data provided by East Riv
 
 Fill in missing precipitation weather data 
 
-Supplement with free, high resolution weather forecasts (from Open-Meteo or similar) to predict future weather conditions. 
+Supplement with free, high-resolution weather forecasts (from Open-Meteo or similar) to predict future weather conditions. 
 
 Blend in alternate data like Active Water Heaters, ground moisture, public holiday and event data to flag days that could show atypical load patterns. 
 
@@ -60,7 +60,7 @@ Incorporate uncertainty estimates for improved peak flagging confidence.
 
 Operational Integration: 
 
-Generate a forecast for Estimated Load Control MW and flag peaks based on operator input or day and location? 
+Generate a forecast for Estimated Load Control MW and flag peaks based on operator input or day and location. 
 
 Automate forecasts on a schedule? 
 
