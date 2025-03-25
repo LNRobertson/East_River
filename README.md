@@ -1,38 +1,49 @@
 ![image](https://github.com/user-attachments/assets/cbe5e2f7-2fbc-48f0-999c-fbdfacc7e890)
  
 
-East River General Load Prediction & Peak Flagging POC 
+## East River General Load Prediction & Peak Flagging POC 
 
-Contributors: 
+Contributors:
+- [Lindsey Robertson](https://linkedin.com/in/lnrobertson)
+- [Aman Singh](https://www.linkedin.com/in/iamasr999)
 
 Objectives 
 
 This project develops an AI-powered load forecasting model for East River General that aims to: 
 
-✅ Predict Estimated Online Load (MW) for the next 24–72 hours using historical SCADA data. 
-✅ Flag potential peak demand events before they exceed the Control Threshold (MW)? 
-✅ Integrate alternative data sources real time weather forecasts.  
+- ✅Predict Estimated Online Load (MW) for the next 24–72 hours using historical SCADA data. 
+- ✅Flag potential peak demand events before they exceed the Control Threshold (MW)
+- ✅Integrate alternative data sources for real-time weather forecasts.  
+
 
 Business Goal: Reduce manual load control interventions and optimize grid stability while preventing costly peak demand charges—even with limited resources. 
+
 
 Problem Statement 
 
 Operators manually control load (Load_Control_MW) when Estimated_OnLine_Load_MW approaches the Control Threshold (Control_Threshold_MW). 
-❌ Existing forecasting models are not accurate enough, leading to unexpected peaks and last-minute interventions. 
-❌ Traditional ML models (like XGBoost) did not capture long-range dependencies well. 
-❌ Weather significantly affects load, but previous methods struggled to incorporate it effectively. 
+
+- ❌ Existing forecasting models are not accurate enough, leading to unexpected peaks and last-minute interventions. 
+- ❌ Traditional ML models (like XGBoost) did not capture long-range dependencies well. 
+- ❌ Weather significantly affects load, but previous methods struggled to incorporate it effectively. 
+
 
 🛠 Tech Stack 
 
+
 Programming: Python 
 
-ML Libraries: scikit-learn, XGBoost/LightGBM, PyTorch for LSTM 
+- ML Libraries: scikit-learn, XGBoost/LightGBM, PyTorch for LSTM 
+
 
 Data Integration/Ingestion:  
 
+
 Deployment:  
 
+
 API/Dashboard: 
+
 
 ✅ Solution 
 
@@ -40,23 +51,25 @@ Proposed Approach for the POC:
 
 Data Integration & Feature Engineering: 
 
-Use historical SCADA data alongside historical weather data provided by East River to understand past patterns and train our models effectively.  
+- Use historical SCADA data alongside historical weather data provided by East River to understand past patterns and train our models effectively.  
 
-Fill in missing precipitation weather data 
+- Fill in missing precipitation weather data 
 
-Supplement with free, high-resolution weather forecasts (from Open-Meteo or similar) to predict future weather conditions. 
+- Supplement with free, high-resolution weather forecasts (from Open-Meteo or similar) to predict future weather conditions. 
 
-Blend in alternate data like Active Water Heaters, ground moisture, public holiday and event data to flag days that could show atypical load patterns. 
+- Blend in alternate data like Active Water Heaters, ground moisture, public holiday and event data to flag days that could show atypical load patterns. 
 
-Generate lagged weather variables and calendar-based features to enrich the model inputs. 
+- Generate lagged weather variables and calendar-based features to enrich the model inputs. 
+
 
 Modeling: 
 
-Start with a baseline, lightweight open-source model (e.g. XGBoost/LightGBM) to quickly establish forecasting accuracy. Compare with previous solution.  
+- Start with a baseline, lightweight open-source model (e.g. XGBoost/LightGBM) to quickly establish forecasting accuracy. Compare with previous solution.  
 
-Optionally, experiment with a simple LSTM or shallow neural network to capture sequential patterns if time and resources allow. 
+- Optionally, experiment with a simple LSTM or shallow neural network to capture sequential patterns if time and resources allow. 
 
-Incorporate uncertainty estimates for improved peak flagging confidence. 
+- Incorporate uncertainty estimates for improved peak flagging confidence. 
+
 
 Operational Integration: 
 
