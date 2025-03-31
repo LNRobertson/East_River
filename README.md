@@ -123,7 +123,7 @@ Key variables like; temperature, humidity, precipitation.
 
 Forecast Weather Data: 
 
-Source: Free weather forecast APIs (e.g., Open-Meteo API Documentation, visual crossing) 
+Source: Free weather forecast APIs (e.g., Open-Mateo API Documentation, visual crossing) 
 
 Key Features: temperature, humidity, precipitation, etc., used to predict future conditions. 
 
