@@ -18,6 +18,7 @@ This project develops an AI-powered load forecasting model for East River Genera
 
 Business Goal: Reduce manual load control interventions and optimize grid stability while preventing costly peak demand charges—even with limited resources. 
 
+- Find progress and approach [slide deck here](https://docs.google.com/presentation/d/1pJottihB1ASlbE_PxFcr8F8a7vs-HiHBUzuatYwBiy0/edit?usp=sharing)
 
 Problem Statement 
 
@@ -192,7 +193,7 @@ Our approach builds on insights from recent research on AI forecasting and dynam
 
  
 
-Research Paper 1 
+Research Paper 1git s 
 
 Research Paper 2 
 
