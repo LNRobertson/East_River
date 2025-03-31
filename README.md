@@ -11,9 +11,9 @@ Objectives
 
 This project develops an AI-powered load forecasting model for East River General that aims to: 
 
-- ✅Predict Estimated Online Load (MW) for the next 24–72 hours using historical SCADA data. 
+- ✅Predict Estimated Online Load (MW) for the next 24–72 hours using historical SCADA and regional weather data. 
 - ✅Flag potential peak demand events before they exceed the Control Threshold (MW)
-- ✅Integrate alternative data sources for real-time weather forecasts.  
+- ✅Incorporate periodic or regularly updated weather data sources to improve forecast accuracy. 
 
 
 Business Goal: Reduce manual load control interventions and optimize grid stability while preventing costly peak demand charges—even with limited resources. 
