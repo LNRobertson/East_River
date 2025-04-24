@@ -50,7 +50,7 @@ East_River/
 │  ├─ [predict.py](./scripts/predict.py)  
 │  └─ [sample_data.py](./scripts/sample_data.py)  
 ├─ [models/](./models/)  
-│  ├─ [multti_lstm/](./models/multi_lstm/)  
+│  ├─ [multi_lstm/](./models/multi_lstm/)  
 │  └─ [xgb_multi_horizon_models/](./models/xgb_multi_horizon_models/)  
 ├─ [environment.yml](./environment.yml)  
 └─ [README.md](./README.md)
