@@ -3,10 +3,6 @@
 
 ## East River General Load Prediction POC 
 
-Contributors:
-- [Lindsey Robertson](https://linkedin.com/in/lnrobertson)
-- [Aman Singh](https://www.linkedin.com/in/iamasr999)
-
 ## Objectives 
 
 This project develops an AI-powered load forecasting model for East River General that aims to: 
