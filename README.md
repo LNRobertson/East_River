@@ -55,7 +55,7 @@ East_River/
 ├─ [environment.yml](./environment.yml)  
 └─ [README.md](./README.md)
 
-## 🚀 Setup 
+
 
 ## 📦 Dependencies
 
@@ -63,8 +63,9 @@ All required Python packages and versions are specified in:
 
 - [environment.yml](./environment.yml) (for Conda users)
 - [requirements.txt](./requirements.txt) (for pip users)
+- 
 
-**Setup instructions:**
+## 🚀 Setup 
 
 ```bash
 # Using Conda (recommended)
@@ -113,6 +114,7 @@ Outputs will land in `outputs/predictions.csv`.
 jupyter notebook notebooks/
 ```
 Open any notebook in `notebooks/` (EDA, feature_engineering, modeling) to step through analyses and visualizations.
+
 
 
 ## 🛠️ Technology Stack
