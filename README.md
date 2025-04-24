@@ -178,7 +178,7 @@ This approach balances accuracy, transparency, and maintainability—delivering 
  
 
 
-📊 Data Sources  
+## 📊 Data Sources  
 
 1️⃣ SCADA Data (Load & Control Information): 
 
@@ -277,7 +277,7 @@ Inspired by insights from recent research on AI forecasting and dynamic data int
 - Hybrid forecasting with weather-lag correlations 
 - Advanced deep learning time-series architectures 
 
-⚠️ Challenges
+##⚠️ Challenges
 - Data Quality & Gaps
 
 - Incomplete SCADA and weather time series; required interpolation and imputation (e.g., KNN for missing load, forward-fill for weather).
