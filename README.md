@@ -59,10 +59,9 @@ All required Python packages and versions are specified in:
 
 - [environment.yml](./environment.yml) (for Conda users)
 - [requirements.txt](./requirements.txt) (for pip users)
-- 
 
 ## 🚀 Setup 
-
+### 1) Install environment and dependencies
 ```bash
 # Using Conda (recommended)
 conda env create -f [environment.yml](http://_vscodecontentref_/0)
@@ -73,8 +72,8 @@ pip install -r [requirements.txt](http://_vscodecontentref_/1)
 
 
 ## ▶️ Run the project 
-### 1) Install dependencies
-```bash
+
+
 conda env create -f environment.yml
 pip install -r requirements.txt
 conda activate er_lstm
@@ -89,7 +88,7 @@ python scripts/sample_data.py
 
 ### 3) (Optional) Generate & Validate JSON Schema  
 ```bash
-python scripts/inspect_schema.py    # writes schema/generated_schema.json
+python scripts/inspect_schema.py    # writes to schema/generated_schema.json
 python scripts/validate_schema.py   # checks one record against it
 ```
 
