@@ -75,7 +75,7 @@ pip install -r [requirements.txt](http://_vscodecontentref_/1)
 ## ▶️ Run the project 
 
 ### 2) Prepare data  
-– Place your full HDF5 under `data/training/east_river_training-v2.h5` (or replace file name in script `.gitignore`).  
+– Place your full HDF5 under `data/training/east_river_training-v2.h5` (or replace file name in script).  
 – Or generate a tiny sample for quick experiments:
 ```bash
 python scripts/sample_data.py
@@ -106,13 +106,11 @@ jupyter notebook notebooks/
 Open any notebook in `notebooks/` (EDA, feature_engineering, modeling) to step through analyses and visualizations.
 
 
-
 ## 🛠️ Technology Stack
 
 **Programming**
 - Python
 - Jupyter Notebooks
-- VS Code
 - GitHub Copilot
 
 **ML Libraries**
@@ -133,21 +131,20 @@ Open any notebook in `notebooks/` (EDA, feature_engineering, modeling) to step t
 - joblib & pickle (model serialization)
 
 
-
 ## ✅ Solution
 
 Integrate historical SCADA load data, weather observations, and external event calendars to deliver robust, multi-horizon load forecasts for East River General. The workflow is designed for reproducibility, operational efficiency, and extensibility.
 
 **1. Data Integration & Feature Engineering**
 - Merge historical SCADA and weather data, aligning on timestamp and location.
-- Fill missing weather values using forward-fill and alternate sources.
+- Fill missing weather values using forward-fill and alternate weather sources.
 - Engineer features: lagged loads, rolling weather stats, calendar/holiday/event flags.
 - Construct multi-horizon targets (24h, 48h, 72h ahead) for supervised learning.
 
 **2. Modeling**
-- Baseline: XGBoost and LightGBM models for fast, interpretable forecasting.
+- Baseline: XGBoostmodels for fast, interpretable forecasting.
 - Advanced: LSTM neural network to capture sequential dependencies and long-range patterns.
-- All models trained with strong regularization, early stopping, and robust validation (60/20/20 chronological split).
+- Models trained with regularization, early stopping, and robust validation (60/20/20 chronological split).
 
 **3. Validation & Evaluation**
 - Hold-out test set (final 20%) used for unbiased MAE/RMSE scoring.
@@ -160,12 +157,12 @@ Integrate historical SCADA load data, weather observations, and external event c
 - Outputs are ready for integration into dashboards or automated operator alerts.
 
 **5. Extensibility & Roadmap**
-- Modular design allows easy retraining with new data or features.
-- Future enhancements: advanced models (TFT, GNNs), uncertainty quantification, integration of market/renewable data, and real-time API deployment.
+- Replicable/automated ETL for new raw data or additional features.
+- Real-time weather and SCADA ingestion.
+- Modular design to allow easy retraining with new data or features.
+- Advanced models (TFT, GNNs), uncertainty quantification, integration of market/renewable data, and real-time API deployment.
 
-This approach balances accuracy, transparency, and maintainability—delivering actionable forecasts to reduce costly peak events and manual interventions.
-
- 
+This approach balances accuracy, and transparency.
 
 
 ## 📊 Data Sources  
@@ -196,28 +193,24 @@ Note: Ingest both historical and live SCADA data to ensure real-time forecasting
 
  - Key variables like; temperature, humidity, precipitation. 
 
-Forecast Weather Data: 
+Forecast Weather Data(Roadmap): 
 
-- Source: Free weather forecast APIs (e.g., Open-Mateo API Documentation, visual crossing) 
+- Source: Free weather forecast APIs (e.g., NOAA, Open-Mateo API Documentation, visual crossing) 
 
 - Key Features: temperature, humidity, precipitation, etc., used to predict future conditions. 
 
- 
 
 3️⃣ External Factors – Public Holidays & Events: 
 
 - Source: Public APIs (e.g., HolidayAPI) or available CSV calendars. 
 
-- Key Features: 
+- Key Features: Binary/categorical flags to indicate weekends, public holidays, or significant local events (Roadmap). These flags help detect usage spikes that are not solely weather-dependent. 
 
- - Binary/categorical flags to indicate weekends, public holidays, or significant local events (Roadmap). These flags help detect usage spikes that are not solely weather-dependent. 
-
- 
 
 ## 🏗 Model Architecture 
 
 1️⃣ Baseline Models  
-   - **XGBoost (multi‑horizon)**  
+   - **Multi-Horizon XGBoost **  
      • Fast, interpretable gradient‑boosted trees for simultaneous 24/48/72 h forecasts.  
 
 2️⃣ Neural Network Models  
@@ -241,12 +234,12 @@ Why This Approach?
 ## 🧹 Preprocessing
 
 1️⃣ Data Ingestion & Parsing  
-   • Load SCADA (`east_river_training-v2.h5`) via `pd.read_hdf`.  
+   • Load historical SCADA  (`merged_clean_SCADA.ipynb`). via `pd.read_hdf`.  
    • Parse `local_time` and `last_control_time` to `datetime`.
 
 2️⃣ Historical Weather Integration  
-   • Merge NOAA observations (`add_NOAA_weather.ipynb`) and Open‑Mateo forecasts (`add_Open_Mateo_Weather.ipynb`).  
-   • Resample to hourly intervals & forward/back‑fill missing values (`all_hist_weather_time-interpolate.ipynb`).
+   • Merge  Open‑Mateo forecasts (`add_Open_Mateo_Weather.ipynb`).  
+   • Resample to 30min intervals & forward/back‑fill missing values (`all_hist_weather_time-interpolate.ipynb`). Compared to KNN imputation. 
 
 3️⃣ Event & Calendar Features  
    • Load public holiday CSV and flag weekends/holidays (`add_holiday_scada_weather.ipynb`).  
@@ -259,7 +252,6 @@ Why This Approach?
    • Fit and persist `StandardScaler` to `multi_lstm_scaler.pkl`.  
    • Generate 60/20/20 train/val/test sequences with `TimeseriesGenerator` (SEQ_LEN=48).
  
- 
 
 ## 🔍 Research 
 
@@ -268,31 +260,34 @@ Inspired by insights from recent research on AI forecasting and dynamic data int
 - Advanced deep learning time-series architectures 
 
 ## ⚠️ Challenges
-- Data Quality & Gaps
-
+Data Quality & Gaps
 - Incomplete SCADA and weather time series; required interpolation and imputation (e.g., KNN for missing load, forward-fill for weather).
 30-min intervals and diverse sources needed careful timestamp alignment.
 Widespread zeros and missing values required robust cleaning and validation.
 Feature selection was challenging due to uncertainty about which engineered features (lags, peaks, rolling stats) best enhance the dataset.
 Domain & Time Constraints
 
-- Limited weather forecasting experience on the team.
-Only ~5 hours/week available for project work.
-Weather & Event Variability
+- Limited time and domain experience. 
 
-- Extreme weather, sensor reliability, and microclimate effects increase prediction complexity.
+- Uncaptured valuable datapoints and dependencies. 
+
+Weather & Event Variability. 
+-Extreme weather, sensor reliability, and microclimate effects increase prediction complexity.
 Uncertainty in capturing event-driven or behavioral load spikes.
+
+
 Integration Complexity
-
 - Merging diverse data sources (SCADA, weather, events) with different formats and update frequencies.
-Modeling & Accuracy
 
+Modeling & Accuracy
 - Balancing computational efficiency with the need for accurate, real-time forecasts.
 Setting optimal thresholds to minimize false positives/negatives in peak detection.
-Operationalization
 
+Operationalization
 - Managing environment dependencies (e.g., GPU/VM issues).
 Ensuring reproducibility and maintainability for future retraining and scaling.
+- Need for robust ETL and ingestion for inference and deployment.
+- Need for modularity for quick data additions, experimentation, and retraining. 
 
 
 ## ❓ Key Open Questions
@@ -304,24 +299,25 @@ Ensuring reproducibility and maintainability for future retraining and scaling.
 - How transferable is this forecasting pipeline to other substations or regions with different load/weather dynamics?  
 - Can we incorporate real‑time streaming data and automated alerts into a production workflow while maintaining reliability?  
 
-
  
 ## 🗺️ Possible Next Steps & Roadmap
 
 1️⃣ Develop ETL Pipelines  
    • Architect end‑to‑end Extract‑Transform‑Load jobs to ingest SCADA, historical weather data (ex. Open‑Meteo), and holiday/event calendars. Explore addional untapped sources. 
-   • Implement data quality checks, missing‑value imputation, timestamp alignment and persisting cleaned data to HDF5 or a centralized data store.  
-   • Build incremental update logic and a sample‑data generator (`scripts/sample_data.py`) for lightweight onboarding.
+   • Implement automated data quality checks, missing‑value imputation, timestamp alignment and persisting cleaned data to HDF5 or a centralized data store.  
+   • Real-time data ingestion. 
 
-2️⃣ Deepen Exploratory Data Analysis  
+2️⃣ Deepen Exploratory Data Analysis 
+   • Explore new and untapped data relationships. 
 
 3️⃣ Educated Feature Engineering & Selection  
    • Automate creation of domain‑informed covariates: dynamic weather lags, rolling statistics, control‑action deltas.  
    • Integrate SHAP‑based importance ranking and recursive feature elimination for targeted pruning.
 
-4️⃣ Integrate Live Forecast Feeds  
+4️⃣ Integrate Live Feeds  
    • Connect to a real‑time weather API for dynamic future feature injection.  
-   • Schedule periodic refresh of exogenous data ahead of each retrain/inference cycle.
+   • Schedule periodic refresh of historical and alternative data ahead of each retrain/inference cycle.
+   • Leverage real time SCADA datapoints 
 
 5️⃣ Model Fine‑Tuning & Validation  
    • Execute hyperparameter sweeps for XGBoost and LSTM.  
@@ -340,7 +336,7 @@ Ensuring reproducibility and maintainability for future retraining and scaling.
    • Quantify value: compare manual intervention costs, peak‑penalty fees and energy wastage against model‑driven forecasts.  
    • Define a retraining cadence (e.g. monthly or drift‑triggered) and monitor data/model drift with automated alerts.
 
-9️⃣ Continuous Improvement & Roadmap  
+9️⃣ Continuous Improvement  
    • Revisit advanced architectures (TFT, GNN, hybrid ensembles) as resource and performance needs evolve.  
    • Incorporate renewable injection and market price signals to further boost forecast robustness.
 
