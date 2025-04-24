@@ -61,6 +61,7 @@ All required Python packages and versions are specified in:
 - [requirements.txt](./requirements.txt) (for pip users)
 
 ## 🚀 Setup 
+
 ### 1) Install environment and dependencies
 ```bash
 # Using Conda (recommended)
@@ -69,15 +70,9 @@ conda activate er_lstm
 
 # Or using pip
 pip install -r [requirements.txt](http://_vscodecontentref_/1)
-
+```
 
 ## ▶️ Run the project 
-
-
-conda env create -f environment.yml
-pip install -r requirements.txt
-conda activate er_lstm
-```
 
 ### 2) Prepare data  
 – Place your full HDF5 under `data/training/east_river_training-v2.h5` (this folder is in `.gitignore`).  
