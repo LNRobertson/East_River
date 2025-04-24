@@ -1,0 +1,884 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "East River Training v2 Input Schema",
+  "description": "Each row in east_river_training-v2.h5 (key=\"df\").",
+  "type": "object",
+  "properties": {
+    "location": {
+      "type": "string",
+      "description": "Location identifier"
+    },
+    "local_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Observation timestamp"
+    },
+    "temperature": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'temperature'"
+    },
+    "wind_speed": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'wind_speed'"
+    },
+    "wind_degree": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'wind_degree'"
+    },
+    "humidity": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'humidity'"
+    },
+    "visibility": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'visibility'"
+    },
+    "pressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'pressure'"
+    },
+    "cloudcover": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'cloudcover'"
+    },
+    "windgust": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'windgust'"
+    },
+    "uv_index": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'uv_index'"
+    },
+    "snowfall": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'snowfall'"
+    },
+    "snow_depth": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'snow_depth'"
+    },
+    "relative_humidity_2m": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'relative_humidity_2m'"
+    },
+    "global_tilted_irradiance": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'global_tilted_irradiance'"
+    },
+    "diffuse_radiation": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'diffuse_radiation'"
+    },
+    "pressure_msl": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'pressure_msl'"
+    },
+    "surface_pressure": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'surface_pressure'"
+    },
+    "blended_precip": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'blended_precip'"
+    },
+    "OnLine_Load_MW": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'OnLine_Load_MW'"
+    },
+    "Load_Control_MW": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'Load_Control_MW'"
+    },
+    "Control_Threshold_MW": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'Control_Threshold_MW'"
+    },
+    "is_weekend": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'is_weekend'"
+    },
+    "is_holiday": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'is_holiday'"
+    },
+    "hour": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'hour'"
+    },
+    "minute": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'minute'"
+    },
+    "day": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'day'"
+    },
+    "month": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'month'"
+    },
+    "year": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'year'"
+    },
+    "hour_sin": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'hour_sin'"
+    },
+    "hour_cos": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'hour_cos'"
+    },
+    "day_of_week_num": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'day_of_week_num'"
+    },
+    "load_lag_3_rolling_std_3": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'load_lag_3_rolling_std_3'"
+    },
+    "load_lag_3_rolling_std_6": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'load_lag_3_rolling_std_6'"
+    },
+    "load_lag_3_rolling_std_12": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'load_lag_3_rolling_std_12'"
+    },
+    "load_diff_1": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'load_diff_1'"
+    },
+    "load_diff_24hr": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'load_diff_24hr'"
+    },
+    "load_lag_3_rolling_std_24hrs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'load_lag_3_rolling_std_24hrs'"
+    },
+    "last_control_time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Last control action timestamp"
+    },
+    "time_since_control_minutes": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'time_since_control_minutes'"
+    },
+    "peak_diff": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'peak_diff'"
+    },
+    "time_since_peak_minutes": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'time_since_peak_minutes'"
+    },
+    "precip_sum_6hrs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'precip_sum_6hrs'"
+    },
+    "day_of_year_sin": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'day_of_year_sin'"
+    },
+    "day_of_year_cos": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'day_of_year_cos'"
+    },
+    "prev_day_peak": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'prev_day_peak'"
+    },
+    "prev_day_avg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'prev_day_avg'"
+    },
+    "prev_week_peak": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'prev_week_peak'"
+    },
+    "temp_humidity_interaction": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'temp_humidity_interaction'"
+    },
+    "wind_precip_interaction": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'wind_precip_interaction'"
+    },
+    "was_controlled": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'was_controlled'"
+    },
+    "load_lag_1_rolling_mean_6hrs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'load_lag_1_rolling_mean_6hrs'"
+    },
+    "load_lag_1_rolling_std_6hrs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'load_lag_1_rolling_std_6hrs'"
+    },
+    "load_lag_1_rolling_std_24hrs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'load_lag_1_rolling_std_24hrs'"
+    },
+    "wind_dir_ENE": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_ENE'"
+    },
+    "wind_dir_ESE": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_ESE'"
+    },
+    "wind_dir_N": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_N'"
+    },
+    "wind_dir_NE": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_NE'"
+    },
+    "wind_dir_NNE": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_NNE'"
+    },
+    "wind_dir_NNW": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_NNW'"
+    },
+    "wind_dir_NW": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_NW'"
+    },
+    "wind_dir_S": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_S'"
+    },
+    "wind_dir_SE": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_SE'"
+    },
+    "wind_dir_SSE": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_SSE'"
+    },
+    "wind_dir_SSW": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_SSW'"
+    },
+    "wind_dir_SW": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_SW'"
+    },
+    "wind_dir_W": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_W'"
+    },
+    "wind_dir_WNW": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_WNW'"
+    },
+    "wind_dir_WSW": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'wind_dir_WSW'"
+    },
+    "weather_descriptions_Blowing snow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Blowing snow'"
+    },
+    "weather_descriptions_Clear": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Clear'"
+    },
+    "weather_descriptions_Cloudy": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Cloudy'"
+    },
+    "weather_descriptions_Fog": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Fog'"
+    },
+    "weather_descriptions_Freezing drizzle": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Freezing drizzle'"
+    },
+    "weather_descriptions_Freezing fog": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Freezing fog'"
+    },
+    "weather_descriptions_Heavy freezing drizzle": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Heavy freezing drizzle'"
+    },
+    "weather_descriptions_Heavy rain": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Heavy rain'"
+    },
+    "weather_descriptions_Heavy rain at times": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Heavy rain at times'"
+    },
+    "weather_descriptions_Heavy snow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Heavy snow'"
+    },
+    "weather_descriptions_Ice pellets": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Ice pellets'"
+    },
+    "weather_descriptions_Light drizzle": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Light drizzle'"
+    },
+    "weather_descriptions_Light freezing rain": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Light freezing rain'"
+    },
+    "weather_descriptions_Light rain": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Light rain'"
+    },
+    "weather_descriptions_Light rain shower": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Light rain shower'"
+    },
+    "weather_descriptions_Light showers of ice pellets": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Light showers of ice pellets'"
+    },
+    "weather_descriptions_Light sleet": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Light sleet'"
+    },
+    "weather_descriptions_Light sleet showers": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Light sleet showers'"
+    },
+    "weather_descriptions_Light snow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Light snow'"
+    },
+    "weather_descriptions_Light snow showers": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Light snow showers'"
+    },
+    "weather_descriptions_Mist": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Mist'"
+    },
+    "weather_descriptions_Moderate or heavy freezing rain": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Moderate or heavy freezing rain'"
+    },
+    "weather_descriptions_Moderate or heavy rain shower": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Moderate or heavy rain shower'"
+    },
+    "weather_descriptions_Moderate or heavy rain with thunder": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Moderate or heavy rain with thunder'"
+    },
+    "weather_descriptions_Moderate or heavy sleet": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Moderate or heavy sleet'"
+    },
+    "weather_descriptions_Moderate or heavy sleet showers": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Moderate or heavy sleet showers'"
+    },
+    "weather_descriptions_Moderate or heavy snow showers": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Moderate or heavy snow showers'"
+    },
+    "weather_descriptions_Moderate rain": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Moderate rain'"
+    },
+    "weather_descriptions_Moderate rain at times": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Moderate rain at times'"
+    },
+    "weather_descriptions_Moderate snow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Moderate snow'"
+    },
+    "weather_descriptions_Overcast": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Overcast'"
+    },
+    "weather_descriptions_Partly cloudy": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Partly cloudy'"
+    },
+    "weather_descriptions_Patchy heavy snow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Patchy heavy snow'"
+    },
+    "weather_descriptions_Patchy light drizzle": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Patchy light drizzle'"
+    },
+    "weather_descriptions_Patchy light rain": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Patchy light rain'"
+    },
+    "weather_descriptions_Patchy light rain with thunder": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Patchy light rain with thunder'"
+    },
+    "weather_descriptions_Patchy light snow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Patchy light snow'"
+    },
+    "weather_descriptions_Patchy moderate snow": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Patchy moderate snow'"
+    },
+    "weather_descriptions_Patchy rain possible": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Patchy rain possible'"
+    },
+    "weather_descriptions_Patchy snow possible": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Patchy snow possible'"
+    },
+    "weather_descriptions_Sunny": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Sunny'"
+    },
+    "weather_descriptions_Thundery outbreaks possible": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Thundery outbreaks possible'"
+    },
+    "weather_descriptions_Torrential rain shower": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_descriptions_Torrential rain shower'"
+    },
+    "day_of_week_Monday": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'day_of_week_Monday'"
+    },
+    "day_of_week_Saturday": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'day_of_week_Saturday'"
+    },
+    "day_of_week_Sunday": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'day_of_week_Sunday'"
+    },
+    "day_of_week_Thursday": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'day_of_week_Thursday'"
+    },
+    "day_of_week_Tuesday": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'day_of_week_Tuesday'"
+    },
+    "day_of_week_Wednesday": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'day_of_week_Wednesday'"
+    },
+    "weather_event_normal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_event_normal'"
+    },
+    "weather_event_storm": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "int32 feature 'weather_event_storm'"
+    },
+    "dow_sin": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'dow_sin'"
+    },
+    "dow_cos": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'dow_cos'"
+    },
+    "y_plus_24h": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'y_plus_24h'"
+    },
+    "y_plus_48h": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'y_plus_48h'"
+    },
+    "y_plus_72h": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "float64 feature 'y_plus_72h'"
+    }
+  },
+  "required": [
+    "local_time",
+    "location"
+  ],
+  "additionalProperties": false
+}
