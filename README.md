@@ -75,7 +75,7 @@ pip install -r [requirements.txt](http://_vscodecontentref_/1)
 ## ▶️ Run the project 
 
 ### 2) Prepare data  
-– Place your full HDF5 under `data/training/east_river_training-v2.h5` (this folder is in `.gitignore`).  
+– Place your full HDF5 under `data/training/east_river_training-v2.h5` (or replace file name in script `.gitignore`).  
 – Or generate a tiny sample for quick experiments:
 ```bash
 python scripts/sample_data.py
