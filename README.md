@@ -354,13 +354,7 @@ Ensuring reproducibility and maintainability for future retraining and scaling.
    • Revisit advanced architectures (TFT, GNN, hybrid ensembles) as resource and performance needs evolve.  
    • Incorporate renewable injection and market price signals to further boost forecast robustness.
 
-✨ This roadmap guides us from POC through scalable production—ensuring data integrity, model accuracy, and operational efficiency while laying the foundation for future innovation.  
-
- 
-
-📜 License 
-
-[MIT License] 
+✨ This roadmap guides us from POC through scalable production, ensuring data integrity, model accuracy, and operational efficiency while laying the foundation for future innovation.  
 
  
 
